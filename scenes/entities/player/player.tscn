@@ -28,3 +28,14 @@ light_energy = 2.073
 spot_range = 10.0
 spot_attenuation = 1.5
 spot_angle = 20.0
+
+[node name="Marker3D" type="Marker3D" parent="Head/Camera3D"]
+
+[node name="PhotoCamera" type="Node3D" parent="."]
+
+[node name="SubViewport" type="SubViewport" parent="PhotoCamera"]
+size_2d_override_stretch = true
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="PhotoCamera/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.859189, -0.55925)

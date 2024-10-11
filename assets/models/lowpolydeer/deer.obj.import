@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bwd4y5sfrhhgn"
+path="res://.godot/imported/deer.obj-d3dca106a24db0963c864c35a7f19ec2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/deer.obj-d3dca106a24db0963c864c35a7f19ec2.mesh"]
+
+source_file="res://assets/models/lowpolydeer/deer.obj"
+dest_files=["res://.godot/imported/deer.obj-d3dca106a24db0963c864c35a7f19ec2.mesh", "res://.godot/imported/deer.obj-d3dca106a24db0963c864c35a7f19ec2.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
