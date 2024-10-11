@@ -15,6 +15,10 @@ run/main_scene="res://scenes/levels/debug/debug.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/terrain_3d/plugin.cfg")
+
 [input]
 
 UP={
@@ -51,3 +55,10 @@ SPRINT={
 [physics]
 
 3d/physics_engine="JoltPhysics3D"
+
+[rendering]
+
+anti_aliasing/screen_space_roughness_limiter/enabled=false
+textures/decals/filter=0
+textures/light_projectors/filter=0
+lights_and_shadows/positional_shadow/atlas_16_bits=false

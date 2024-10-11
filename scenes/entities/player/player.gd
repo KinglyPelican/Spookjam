@@ -27,6 +27,14 @@ func _unhandled_input(event):
 		head.rotate_y(-event.relative.x * SENSITIVITY)
 		camera.rotate_x(-event.relative.y * SENSITIVITY)
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
+		
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+		$PhotoCamera/SubViewport/Camera3D.global_position = $Head/Camera3D/Marker3D.global_position
+		$PhotoCamera/SubViewport/Camera3D.global_rotation = $Head/Camera3D/Marker3D.global_rotation
+		
+		var photo = $PhotoCamera/SubViewport.get_viewport().get_texture()
+		var image = photo.get_image()
+		image.save_png("break.png")
 
 func _physics_process(delta):
 	# Add the gravity.

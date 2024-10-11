@@ -1,0 +1,43 @@
+[gd_scene load_steps=9 format=3 uid="uid://bqpdp8hq0ylmd"]
+
+[ext_resource type="Script" path="res://scenes/entities/deer/deer.gd" id="1_0vox1"]
+[ext_resource type="Script" path="res://scripts/statemachine/statemachine.gd" id="2_mwhjh"]
+[ext_resource type="Script" path="res://scenes/entities/deer/states/idle.gd" id="3_na6y0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8sqyh"]
+albedo_color = Color(0.654902, 0.301961, 0.184314, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ckt4r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1xy70"]
+albedo_color = Color(0.232711, 0.0822312, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_yr0tk"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ovh31"]
+
+[node name="Deer" type="CharacterBody3D"]
+script = ExtResource("1_0vox1")
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_8sqyh")
+mesh = SubResource("CapsuleMesh_ckt4r")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(0.408272, 0, 0, 0, 0.12724, 0, 0, 0, 0.530606, 0.389836, 0.361, 0)
+material_override = SubResource("StandardMaterial3D_1xy70")
+mesh = SubResource("CylinderMesh_yr0tk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_ovh31")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+
+[node name="Statemachine" type="Node" parent="." node_paths=PackedStringArray("default_state")]
+script = ExtResource("2_mwhjh")
+default_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="Statemachine" node_paths=PackedStringArray("deer")]
+script = ExtResource("3_na6y0")
+deer = NodePath("../..")
