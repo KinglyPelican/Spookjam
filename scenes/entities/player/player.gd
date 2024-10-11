@@ -55,6 +55,8 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("LEFT", "RIGHT", "UP", "DOWN")
 	var direction = (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	if(Input.is_action_just_pressed("toggle_flashlight")):
+		$Head/Camera3D/SpotLight3D.visible = not $Head/Camera3D/SpotLight3D.visible
 	if is_on_floor():
 		if direction:
 			velocity.x = direction.x * speed

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dya1ge17dy0mw"
+path="res://.godot/imported/shovel.obj-90da7c386cebc50ea98d3f4a9dfc95c2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/shovel.obj-90da7c386cebc50ea98d3f4a9dfc95c2.mesh"]
+
+source_file="res://assets/models/graveyard_assets/Models/OBJ format/shovel.obj"
+dest_files=["res://.godot/imported/shovel.obj-90da7c386cebc50ea98d3f4a9dfc95c2.mesh", "res://.godot/imported/shovel.obj-90da7c386cebc50ea98d3f4a9dfc95c2.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

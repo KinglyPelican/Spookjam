@@ -1,0 +1,46 @@
+[gd_scene load_steps=11 format=3 uid="uid://c8fmci0ehe4y8"]
+
+[ext_resource type="Texture2D" uid="uid://b3m4485nltsdw" path="res://resource/skybox/panorama_image (1).png" id="1_pnx6n"]
+[ext_resource type="Script" path="res://scenes/levels/terrain_test/terrain_test.gd" id="1_polnu"]
+[ext_resource type="PackedScene" uid="uid://ce3gcwxmqsimk" path="res://scenes/entities/player/player.tscn" id="2_m4x0d"]
+[ext_resource type="Terrain3DStorage" uid="uid://5bt52uw7gfoe" path="res://resource/terrain3d/new_terrain_3d_storage.res" id="3_7vp2k"]
+[ext_resource type="Terrain3DMaterial" uid="uid://b3quvmidvibd3" path="res://resource/terrain3d/new_terrain_3d_material.tres" id="4_k80xm"]
+[ext_resource type="Terrain3DAssets" uid="uid://da208bf5wjxki" path="res://resource/terrain3d/new_terrain_3d_assets.tres" id="5_3npv4"]
+[ext_resource type="PackedScene" uid="uid://i4hm7m5145qj" path="res://scenes/entities/moon/moon.tscn" id="5_lfhvr"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_5tnps"]
+panorama = ExtResource("1_pnx6n")
+
+[sub_resource type="Sky" id="Sky_kehkx"]
+sky_material = SubResource("PanoramaSkyMaterial_5tnps")
+
+[sub_resource type="Environment" id="Environment_ism7e"]
+background_mode = 2
+sky = SubResource("Sky_kehkx")
+ambient_light_source = 1
+ambient_light_sky_contribution = 0.0
+tonemap_mode = 2
+glow_enabled = true
+fog_height = 1024.0
+volumetric_fog_density = 0.03
+
+[node name="TerrainTest" type="Node3D"]
+script = ExtResource("1_polnu")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 4132.73, -1372.35)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ism7e")
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("2_m4x0d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -496.88, 511.852, -599.557)
+
+[node name="moon" parent="." instance=ExtResource("5_lfhvr")]
+transform = Transform3D(1000, 0, 0, 0, 302.037, -953.296, 0, 953.296, 302.037, 0, 4098.69, -1298.61)
+
+[node name="Terrain3D" type="Terrain3D" parent="."]
+storage = ExtResource("3_7vp2k")
+material = ExtResource("4_k80xm")
+assets = ExtResource("5_3npv4")

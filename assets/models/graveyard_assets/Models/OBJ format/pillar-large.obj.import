@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://djj6lk3a2lch6"
+path="res://.godot/imported/pillar-large.obj-6da9f3ef4b1f9817a37220e7e4d75e4b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pillar-large.obj-6da9f3ef4b1f9817a37220e7e4d75e4b.mesh"]
+
+source_file="res://assets/models/graveyard_assets/Models/OBJ format/pillar-large.obj"
+dest_files=["res://.godot/imported/pillar-large.obj-6da9f3ef4b1f9817a37220e7e4d75e4b.mesh", "res://.godot/imported/pillar-large.obj-6da9f3ef4b1f9817a37220e7e4d75e4b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
