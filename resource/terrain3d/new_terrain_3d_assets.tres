@@ -1,0 +1,58 @@
+[gd_resource type="Terrain3DAssets" load_steps=15 format=3 uid="uid://da208bf5wjxki"]
+
+[ext_resource type="Texture2D" uid="uid://bpaqsiw0l6178" path="res://assets/graphics/terrain/poly haven textures/grass/rocky_terrain_02_diff_1k.png" id="1_6anoo"]
+[ext_resource type="Texture2D" uid="uid://ciki2nexq54wj" path="res://assets/graphics/terrain/poly haven textures/grass/rocky_terrain_02_nor_gl_1k.png" id="2_ch1ed"]
+[ext_resource type="Texture2D" uid="uid://pw508tdwqh71" path="res://assets/graphics/terrain/poly haven textures/mountain/rock_surface_diff_1k.png" id="3_oxi0o"]
+[ext_resource type="Texture2D" uid="uid://b4t46533ldeq8" path="res://assets/graphics/terrain/poly haven textures/mountain/rock_surface_nor_gl_1k.png" id="4_p5dry"]
+[ext_resource type="Texture2D" uid="uid://cwqf6tp7m5ut7" path="res://assets/graphics/terrain/poly haven textures/snow/snow_01_diff_1k.png" id="5_ikcoy"]
+[ext_resource type="Texture2D" uid="uid://cnr1vjej25seu" path="res://assets/graphics/terrain/poly haven textures/snow/snow_01_nor_gl_1k.png" id="6_7cn4n"]
+[ext_resource type="Texture2D" uid="uid://dlb7hcm32hlcv" path="res://assets/graphics/terrain/poly haven textures/pathway/rocky_trail_02_diff_1k.png" id="7_x7u2d"]
+[ext_resource type="Texture2D" uid="uid://cr3je78wo3pfw" path="res://assets/graphics/terrain/poly haven textures/pathway/rocky_trail_02_nor_gl_1k.png" id="8_vycyj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f8bxq"]
+cull_mode = 2
+vertex_color_use_as_albedo = true
+backlight_enabled = true
+backlight = Color(0.5, 0.5, 0.5, 1)
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_3lant"]
+height_offset = 0.5
+density = 10.0
+material_override = SubResource("StandardMaterial3D_f8bxq")
+generated_type = 1
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_b7y2k"]
+name = "grass"
+albedo_texture = ExtResource("1_6anoo")
+normal_texture = ExtResource("2_ch1ed")
+uv_scale = 1.0
+detiling = 1.0
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_hn4rm"]
+name = "stone"
+id = 1
+albedo_color = Color(0.389287, 0.389287, 0.389287, 1)
+albedo_texture = ExtResource("3_oxi0o")
+normal_texture = ExtResource("4_p5dry")
+uv_scale = 1.0
+detiling = 1.0
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_xgxc0"]
+name = "snow"
+id = 2
+albedo_texture = ExtResource("5_ikcoy")
+normal_texture = ExtResource("6_7cn4n")
+uv_scale = 1.0
+detiling = 1.0
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_f770s"]
+name = "dirt"
+id = 3
+albedo_texture = ExtResource("7_x7u2d")
+normal_texture = ExtResource("8_vycyj")
+uv_scale = 1.0
+detiling = 1.0
+
+[resource]
+mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_3lant")])
+texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_b7y2k"), SubResource("Terrain3DTextureAsset_hn4rm"), SubResource("Terrain3DTextureAsset_xgxc0"), SubResource("Terrain3DTextureAsset_f770s")])

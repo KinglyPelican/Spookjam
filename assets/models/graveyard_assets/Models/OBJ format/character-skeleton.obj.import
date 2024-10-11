@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cmytenh5v5e37"
+path="res://.godot/imported/character-skeleton.obj-41d2b2805f9c1763452fb605f7ec9d8f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/character-skeleton.obj-41d2b2805f9c1763452fb605f7ec9d8f.mesh"]
+
+source_file="res://assets/models/graveyard_assets/Models/OBJ format/character-skeleton.obj"
+dest_files=["res://.godot/imported/character-skeleton.obj-41d2b2805f9c1763452fb605f7ec9d8f.mesh", "res://.godot/imported/character-skeleton.obj-41d2b2805f9c1763452fb605f7ec9d8f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
